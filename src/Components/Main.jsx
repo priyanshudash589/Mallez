@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <>
       <div className="relative bg-main3 h-[94vh] bg-cover  bg-center w-screen">
-        <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent bg-opacity-20 backdrop-invert backdrop-blur-[10px] flex justify-center items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent bg-opacity-20 backdrop-invert backdrop-blur-[4px] flex justify-center items-center">
           <div className="w-full flex flex-col container gap-8 sm:gap-2 text-white">
             <span className="font-revalia font-bold text-4xl sm:text-6xl md:text-6xl lg:text-8xl xl:text-9xl">
               Feel the Ease <br />

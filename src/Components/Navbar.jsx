@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Button from "../Constants/Button";
 
@@ -9,43 +8,45 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <>
       <nav className="bg-black h-[6rem] p-[1rem] text-white flex flex-row justify-center items-center">
         <div className="container flex flex-row justify-between items-center">
-        <span className="text-2xl font-bold w-[20rem]">MALLez</span>
+          <span className="text-2xl font-bold w-[20rem]">MALLez</span>
 
-        <div className="hidden">
-            <ul className="flex gap-4">
-                <li className="w-[10rem]">
-                    <Button name="Recharge"/>
-                </li>
-                <li className="w-[10rem]">
-                    <Button name="Navigate"/>
-                </li>
-            </ul>
-        </div>
+          {/* Full Menu for large screens */}
+          <ul className="hidden lg:flex flex-row gap-8">
+            <li className="mx-2 p-2">Home</li>
+            <li className="mx-2 p-2">Event</li>
+            <li className="mx-2 p-2">Explore</li>
+            <li className="mx-2 p-2">About Us</li>
+            <li className="mx-2 p-2">Contact</li>
+            <li className="mx-2 p-2">
+              <Button name="Login / Sign Up" />
+            </li>
+          </ul>
 
-        {/* Hamburger icon for mobile */}
-        <div className="md:hidden" onClick={toggleMenu}>
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </div>
+          {/* Hamburger icon for mobile and medium screens */}
+          <div className="lg:hidden" onClick={toggleMenu}>
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </div>
 
-        {/* Navigation links */}
-        <ul
-          className={`flex flex-col md:flex-row gap-8 absolute md:static top-[4rem] left-0 w-full h-[22rem] bg-blue-900 md:w-auto md:bg-transparent md:items-center md:flex transition-transform transform ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          } md:translate-x-0 md:flex`}
-        >
-          <li className="mx-2 p-2 md:p-0">Home</li>
-          <li className="mx-2 p-2 md:p-0">Event</li>
-          <li className="mx-2 p-2 md:p-0">Explore</li>
-          <li className="mx-2 p-2 w-[5rem] md:p-0">About Us</li>
-          <li className="mx-2 p-2 md:p-0">Contact</li>
-          <li className="mx-2 p-2 w-[12rem]">
-            <Button name="Login / Sign Up"/>
-          </li>
-        </ul>
+          {/* Mobile Navigation Links */}
+          <ul
+            className={`${
+              isOpen ? "translate-x-0" : "-translate-x-full"
+            } absolute top-[6rem] left-0 bg-black w-full flex flex-col gap-8 py-4 px-4 z-50 md:hidden transition-transform duration-300 ease-in-out`}
+          >
+            <li className="mx-2 p-2 text-white">Home</li>
+            <li className="mx-2 p-2 text-white">Event</li>
+            <li className="mx-2 p-2 text-white">Explore</li>
+            <li className="mx-2 p-2 text-white">About Us</li>
+            <li className="mx-2 p-2 text-white">Contact</li>
+            <li className="mx-2 p-2">
+              <Button name="Login / Sign Up" />
+            </li>
+          </ul>
         </div>
       </nav>
     </>
@@ -53,3 +54,18 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+ {/* Desktop Links */}
+          {/* <div className="hidden">
+            <ul className="flex gap-4">
+              <li className="w-[10rem]">
+                <Button name="Recharge" />
+              </li>
+              <li className="w-[10rem]">
+                <Button name="Navigate" />
+              </li>
+            </ul>
+          </div> */}
