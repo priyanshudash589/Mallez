@@ -1,5 +1,5 @@
 import React from "react";
-import park from "../assets/park2.png";
+import park from "../Assets/park2.png";
 
 const Products = () => {
   return (
