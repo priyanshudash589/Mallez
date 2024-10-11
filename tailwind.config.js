@@ -8,9 +8,9 @@ module.exports = withMT({
   theme: {
     extend: {
       backgroundImage: {
-        "main1": "url('/src/assets/mall-bgg.jpg')",
-        "main2": "url('/src/assets/main-bg2.png')",
-        "main3": "url('/src/assets/mall-bg3.svg')",
+        "main1": "url('/src/Assets/mall-bgg.jpg')",
+        "main2": "url('/src/Assets/main-bg2.png')",
+        "main3": "url('/src/Assets/mall-bg3.svg')",
       },
       boxShadow: {
         '3xl': '0px 10px 220px 0px rgba(0, 8, 8, 8)',
